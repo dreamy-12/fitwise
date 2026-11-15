@@ -1,0 +1,61 @@
+# api call for 
+###
+POST  http://127.0.0.1:8000/user/register/
+Content-Type:application/json
+
+{
+  "username":"admin",
+  "email":"admin@gmail.com",
+  "password":"admin@123"
+}
+
+
+#api call for fetching all records
+###
+GET  http://127.0.0.1:8000/foodlog/
+Accept:application/json
+Authorization:Basic admin:admin@123
+
+# api call for craeting
+###
+POST  http://127.0.0.1:8000/foodlog/
+Content-Type:application/json
+Authorization:Basic admin:admin@123
+
+{
+    "title":"Salad",
+    "meal_type":"lunch",
+    "calories":200,
+    "serving_size":"250g",
+    "owner":"Anu"
+}
+
+
+# api call fetching a food log  detail
+###
+GET  http://127.0.0.1:8000/foodlog/1/
+Accept:application/json
+Authorization:Basic admin:admin@123
+
+
+# api call for updating
+###
+PUT http://127.0.0.1:8000/foodlog/3/
+Content-Type:application/json
+Authorization:Basic admin:admin@123
+
+{
+    "title":"Chicken-Salad",
+    "meal_type":"lunch",
+    "calories":250,
+    "serving_size":"200g",
+    "owner":"Anu"
+}
+
+
+# api call for deleting
+###
+DELETE http://127.0.0.1:8000/foodlog/4/
+Accept:application/json
+Authorization:Basic admin:admin@123
+
